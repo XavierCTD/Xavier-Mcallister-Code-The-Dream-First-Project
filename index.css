@@ -1,8 +1,18 @@
 body {
   background-color: gray;
   font-family: roboto black;
+  margin: 50px;
 }
 h1 {
-  font-size: 25px;
   color: lightblue;
+  padding: 25px;
+}
+h2 {
+  color: lightblue;
+  padding: 25px;
+}
+p {
+  font-size: 25px;
+  font-family: bold;
+  padding: 25px;
 }
