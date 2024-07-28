@@ -3,16 +3,46 @@ body {
   font-family: roboto black;
   margin: 50px;
 }
+
 h1 {
+  font-family: cursive;
   color: lightblue;
   padding: 25px;
+  font-weight: bold;
 }
+
 h2 {
   color: lightblue;
   padding: 25px;
+  font-weight: bold;
 }
+
 p {
   font-size: 25px;
   font-family: bold;
   padding: 25px;
+}
+
+ul {
+  list-style-type: none;
+  color: green;
+  text-align: center;
+}
+
+a:link {
+ color: red;
+ text-decoration: none;
+}
+
+a:visited {
+  color: green;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
 }
