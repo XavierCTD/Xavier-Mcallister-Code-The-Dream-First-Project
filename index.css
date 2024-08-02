@@ -1,7 +1,25 @@
+#Experience {
+  width: 500px;
+  display:flex;
+}
+
+#Connect {
+  width: 500px;
+  display:flex;
+}
+
+.btn {
+  color: white;
+  background-color: lightgreen;
+  border: 5px solid black;
+  text-decoration: none;
+  padding: 5px;
+}
+
 body {
   background-color: gray;
   font-family: roboto black;
-  margin: 50px;
+  margin: 0;
 }
 
 h1 {
@@ -9,6 +27,7 @@ h1 {
   color: lightblue;
   padding: 25px;
   font-weight: bold;
+  text-align: center;
 }
 
 h2 {
