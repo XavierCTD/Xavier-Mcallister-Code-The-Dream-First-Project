@@ -1,3 +1,8 @@
+div.images {
+  float:right;
+  border-style:outset;
+}
+
 #Experience {
   width: 500px;
   display:flex;
