@@ -1,22 +1,22 @@
 div.images {
   float:right;
   border-style:outset;
+  margin: auto
 }
 
 #Experience {
-  width: 500px;
   display:flex;
 }
 
 #Connect {
-  width: 500px;
   display:flex;
 }
 
 .btn {
+  text-align: center;
   color: white;
   background-color: lightgreen;
-  border: 5px solid black;
+  border: 1px solid black;
   text-decoration: none;
   padding: 5px;
 }
@@ -53,20 +53,19 @@ ul {
   text-align: center;
 }
 
-a:link {
+a:link, a:visited {
+ background-color: rgb(16, 52, 168);
  color: red;
  text-decoration: none;
-}
-
-a:visited {
-  color: green;
-  text-decoration: none;
+ text-align: justify;
 }
 
 a:hover {
   text-decoration: underline;
+  text-align: justify;
 }
 
 a:active {
   text-decoration: underline;
+  text-align: justify;
 }
