@@ -1,3 +1,8 @@
+.container {
+  display: grid;
+  gap: 45px;
+}
+
 div.images {
   float:right;
   border-style:outset;
@@ -19,6 +24,12 @@ div.images {
   border: 1px solid black;
   text-decoration: none;
   padding: 5px;
+}
+
+aside {
+  font-family: italic;
+  background-color: dodgerblue;
+  color: white;
 }
 
 body {
@@ -68,4 +79,40 @@ a:hover {
 a:active {
   text-decoration: underline;
   text-align: justify;
+}
+
+@media(max-width: 1250px){
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
+  }
+  aside {
+   float: left;
+   margin: auto;
+  }
+  header {
+    text-align: center;
+    padding: 12px;
+  }
+}
+
+@media(max-width: 1000px){
+  body {
+    background-color: black;
+    font-family: italic;
+  }
+  p {
+    color: white;
+    font-family: bold;
+    padding: 25px;
+  }
+  h1 {
+    text-align: left;
+    color: white;
+    font-family: cursive;
+    padding: 25px;
+    font-weight: light;
+  }
 }
