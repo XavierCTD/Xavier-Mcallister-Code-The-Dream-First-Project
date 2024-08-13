@@ -1,18 +1,18 @@
 .container {
   display: grid;
-  gap: 45px;
+  grid-template-rows: auto;
 }
 
 #Experience {
   display: flex;
-  border: 5px aqua;
+  border: 5px solid aqua;
   float: left;
   margin: auto;
 }
 
 #Connect {
   display: flex;
-  border: 5px aqua;
+  border: 5px solid aqua;
   float: left;
   margin: auto;
 }
