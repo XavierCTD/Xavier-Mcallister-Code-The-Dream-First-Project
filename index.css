@@ -8,14 +8,14 @@
   display: flex;
   border: 5px solid aqua;
   float: left;
-  margin: auto;
+  padding: 5px;
 }
 
 #Connect {
   display: flex;
   border: 5px solid aqua;
   float: left;
-  margin: auto;
+  padding: 5px;
 }
 
 .btn {
