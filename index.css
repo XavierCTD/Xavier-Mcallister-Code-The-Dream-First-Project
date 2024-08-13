@@ -5,10 +5,15 @@
 
 #Experience {
   display:flex;
+  border: 5px aqua;
+  padding: 20px;
 }
 
 #Connect {
   display:flex;
+  border: 5px aqua;
+  float: left;
+  margin: auto;
 }
 
 .btn {
