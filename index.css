@@ -6,7 +6,8 @@
 #Experience {
   display:flex;
   border: 5px aqua;
-  padding: 20px;
+  float: left;
+  margin: auto;
 }
 
 #Connect {
