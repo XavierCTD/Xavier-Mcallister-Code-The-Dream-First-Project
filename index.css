@@ -2,17 +2,18 @@
   display: grid;
   gap: 45px;
 }
-
-div.images {
-  
+ 
 #Experience {
-  width: 500px;
-  display: flex;
+  display:flex;
+  border: 5px aqua;
+  padding: 20px;
 }
 
 #Connect {
-  width: 500px;
-  display: flex;
+  display:flex;
+  border: 5px aqua;
+  float: left;
+  margin: auto;
 }
 
 .btn {
