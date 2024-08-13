@@ -1,11 +1,19 @@
+.container {
+  display: grid;
+  gap: 45px;
+}
+
 #Experience {
-  width: 500px;
   display: flex;
+  border: 5px aqua;
+  padding: 20px;
 }
 
 #Connect {
-  width: 500px;
   display: flex;
+  border: 5px aqua;
+  float: left;
+  margin: auto;
 }
 
 .btn {
