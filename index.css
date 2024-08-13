@@ -14,6 +14,7 @@
 #Connect {
   display: flex;
   border: 2px solid aqua;
+  float: left;
   padding: 5px;
 }
 
