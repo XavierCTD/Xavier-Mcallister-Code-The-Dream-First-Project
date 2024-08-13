@@ -71,10 +71,10 @@ a:visited {
 
 a:hover {
   text-decoration: underline;
-  text-align: justify;
+  text-align: left;
 }
 
 a:active {
   text-decoration: underline;
-  text-align: justify;
+  text-align: left;
 }
