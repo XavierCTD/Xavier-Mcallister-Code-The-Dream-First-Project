@@ -2,7 +2,7 @@
   display: grid;
   gap: 45px;
 }
-
+ 
 #Experience {
   display:flex;
   border: 5px aqua;
@@ -63,11 +63,14 @@ ul {
   text-align: center;
 }
 
-a:link, a:visited {
- background-color: rgb(16, 52, 168);
- color: red;
- text-decoration: none;
- text-align: justify;
+a:link {
+  color: red;
+  text-decoration: none;
+}
+
+a:visited {
+  color: green;
+  text-decoration: none;
 }
 
 a:hover {
