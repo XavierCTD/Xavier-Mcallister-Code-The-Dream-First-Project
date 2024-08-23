@@ -57,11 +57,18 @@
     <section>
      <h2>Leave a Message</h2>
         <form name="leave_message">
-          <label>Username:</label><br>
-          <input type="text" name="usersName"><br>
-          <label>E-mail:</label><br>
-          <input type="email" name="usersMessage"><br>
-          <button type="submit">Submit</button>
+          <label>Username:</label>
+           <input type="text" 
+                  name="usersName" 
+                  required="true"><br>
+          <label>E-mail:</label>
+           <input type="email" 
+                  name="usersEmail"
+                  required="true"><br>
+          <button type="submit">
+            Submit
+          </button>
+        </form>
     </section>
 
     <section id="messages">
