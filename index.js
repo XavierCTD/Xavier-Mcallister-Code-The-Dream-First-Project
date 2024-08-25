@@ -83,9 +83,32 @@ newString = <a href="mailto:${email}">${username}</a>\n
 <span>${usersMessage}</span>";
 console.log(newString);
 newMessage.innerHTML = newString;
+   
 
 // Message Form
 
 const messageForm = document.getElementsByName("leave_message");
 console.log(messageForm);
 messageForm.addEventListener("submit", onFormSubmit);
+
+
+// Remove Message
+
+const removeButton = document.createElement("BUTTON");
+removeButton.innerText = "Remove";
+removeButton.setAttribute("Type", "Button");
+removeButton.setAttribute("id", "removeButtonId");
+removeButton.addEventListener("click", onRemoveButton);
+console.log(removeButton);
+
+
+// Message Appended
+
+newMessage.appendChild(removeButton);
+messageList[0].appendChild(newMessage);
+   
+
+// Reseting Form
+
+event.target.reset();
+}
