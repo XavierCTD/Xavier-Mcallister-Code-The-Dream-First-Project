@@ -66,7 +66,7 @@ function onFormSubmit(event) {
    const email = data.get(usersEmail);
    console.log(userName);
    console.log(email);
-   
+}
 
 // Message Display Beneath Section
 
@@ -111,4 +111,3 @@ messageList[0].appendChild(newMessage);
 // Reseting Form
 
 event.target.reset();
-}
