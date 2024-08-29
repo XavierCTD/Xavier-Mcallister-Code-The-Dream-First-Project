@@ -54,6 +54,23 @@ for(let i = 0; i < skills.length; i++ ) {
 }
 
 
+// Callback for Remove Button
+
+function onRemoveButton(event){
+   console.log("Remove");
+   const entry = event.target.parentNode;
+   entry.remove();
+
+   const messageSection = document.getElementById("messages");
+   const messageList = messageSection.getElementByTagName("li");
+   console.log(messageList);
+   console.log(messageList.length);
+   if (messageList.length === 0) {
+      messageSection.hidden = true;
+   }
+}
+
+
 // Callback Result
 
 function onFormSubmit(event) {
@@ -66,7 +83,7 @@ function onFormSubmit(event) {
    const email = data.get(usersEmail);
    console.log(userName);
    console.log(email);
-}
+
 
 // Message Display Beneath Section
 
@@ -74,7 +91,7 @@ const messageSection = document.getElementById("messages");
 const messageList = messageSection.getElementByTagName("ul");
 console.log(messageList);
 messageSection.hidden = false;
-   
+
 
 // Message Display
 
@@ -83,16 +100,9 @@ newString = <a href="mailto:${email}">${username}</a>\n
 <span>${usersMessage}</span>";
 console.log(newString);
 newMessage.innerHTML = newString;
-   
-
-// Message Form
-
-const messageForm = document.getElementsByName("leave_message");
-console.log(messageForm);
-messageForm.addEventListener("submit", onFormSubmit);
 
 
-// Remove Message
+ // Remove Message
 
 const removeButton = document.createElement("BUTTON");
 removeButton.innerText = "Remove";
@@ -100,7 +110,7 @@ removeButton.setAttribute("Type", "Button");
 removeButton.setAttribute("id", "removeButtonId");
 removeButton.addEventListener("click", onRemoveButton);
 console.log(removeButton);
-
+ 
 
 // Message Appended
 
@@ -111,3 +121,11 @@ messageList[0].appendChild(newMessage);
 // Reseting Form
 
 event.target.reset();
+};
+
+// Find Message Form
+
+const messageForms = document.getElementsByName("leave_message");
+console.log(messageForms);
+const messageForm = messageForms[0];
+console.log(messageForm);
