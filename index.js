@@ -123,9 +123,17 @@ messageList[0].appendChild(newMessage);
 event.target.reset();
 };
 
+
 // Find Message Form
 
 const messageForms = document.getElementsByName("leave_message");
 console.log(messageForms);
 const messageForm = messageForms[0];
+
+
+// Hide Message Form
+
+const messageSection = document.getElementByID("messages");
+messageSection.hidden = true;
 console.log(messageForm);
+messageForm.addEventListener("submit", onFormSubmit);
