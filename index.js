@@ -139,35 +139,39 @@ messageForm.addEventListener("submit", onFormSubmit);
 
 // Adding Fetch Method
 
-get(`https://api.github.com/users/${GITHUB_USERNAME}/repos`)
+
+const userName = 'Xav183';
+
+fetch(`https://api.github.com/users/${userName}/repos`)
    .then((response => {
       if(!response.ok) {
+         return response.text();
+      } else {
          throw new Error('Request Failed');
       }
-      return response.json();
    })
 
-
-// Retrieving Data
-
 .then((data) => {
-   console.log("json data =", data);
-   repositories = [...data];
-   console.log("repositories array =", repositories);
+  const repositories = JSON.parse(data);
+   console.log(repositories);
 
 // Creating repository lists
 
 const projectSection = document.getElementById("project-section");
 const projectList = document.getElementByTagName("UL");
-   for(let i = 0; i < repositories.length; i++) {
+   projectSection.appendChild(projectList);
+   
+   for(let repository of repositories) {
       const project = document.createElement("LI");
-      project.innerHTML = repositories[i].html_url;
-      console.log(project);
-      projectList[0].appendChild(project);
+      project.innerText = repository.name;
+      projectList.appendChild(project);
    }
 })
  .catch((error) => {
-    console.error('An error occured:', error);
+    if (error instanceof SyntaxError) {
+       console.error("Unparsable response from server");
+    } else {
+    console.error('An error occured:', error.message);
  });
             
          
