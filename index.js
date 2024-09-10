@@ -123,11 +123,13 @@ messageList[0].appendChild(newMessage);
 event.target.reset();
 };
 
+
 // Find Message Form
 
 const messageForms = document.getElementsByName("leave_message");
 console.log(messageForms);
 const messageForm = messageForms[0];
+
 
 // Hide Message Form
 
@@ -153,11 +155,11 @@ fetch(`https://api.github.com/users/${userName}/repos`)
 
 .then((data) => {
   const repositories = JSON.parse(data);
-   console.log(repositories);
+  console.log(repositories);
 
 // Creating repository lists
 
-const projectSection = document.getElementById("project-section");
+const projectSection = document.getElementById("project-sections");
 const projectList = document.getElementByTagName("UL");
    projectSection.appendChild(projectList);
    
@@ -166,12 +168,11 @@ const projectList = document.getElementByTagName("UL");
       project.innerText = repository.name;
       projectList.appendChild(project);
    }
-})
+ })
  .catch((error) => {
     if (error instanceof SyntaxError) {
        console.error("Unparsable response from server");
     } else {
     console.error('An error occured:', error.message);
+    }
  });
-            
-         
