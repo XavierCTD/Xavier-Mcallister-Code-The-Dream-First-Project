@@ -129,3 +129,37 @@ const messageForms = document.getElementsByName("leave_message");
 console.log(messageForms);
 const messageForm = messageForms[0];
 console.log(messageForm);
+
+
+// Adding Fetch Method
+
+get(`https://api.github.com/users/${GITHUB_USERNAME}/repos`)
+   .then((response => {
+      if(!response.ok) {
+         throw new Error('Request Failed');
+      }
+      return response.json();
+   })
+
+
+// Retrieving Data
+
+.then((data) => {
+   console.log("json data =", data);
+   repositories = [...data];
+   console.log("repositories array =", repositories);
+
+// Creating repository lists
+
+const projectSection = document.getElementById("project-section");
+const projectList = document.getElementByTagName("UL");
+   for(let i = 0; i < repositories.length; i++) {
+      const project = document.createElement("LI");
+      project.innerHTML = repositories[i].html_url;
+      console.log(project);
+      projectList[0].appendChild(project);
+   }
+})
+ .catch((error) => {
+    console.error('An error occured:', error);
+ });
