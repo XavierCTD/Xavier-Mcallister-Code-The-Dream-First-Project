@@ -133,16 +133,17 @@ console.log(messageForm);
 
 // Adding Fetch Method
 
-get(`https://api.github.com/users/${GITHUB_USERNAME}/repos`)
+const userName = "Xav183";
+
+get(`https://api.github.com/users/${userName}/repos`)
    .then((response => {
       if(!response.ok) {
+      return response.text();
+      } else{
          throw new Error('Request Failed');
       }
       return response.json();
    })
-
-
-// Retrieving Data
 
 .then((data) => {
    console.log("json data =", data);
