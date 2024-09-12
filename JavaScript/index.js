@@ -45,7 +45,7 @@ console.log(skillsSection);
 const skillsList = document.getElementById("skills-list");
 console.log(skillsList);
 
-for(let i = 0; i < skill.length; i++ ) {
+for(let i = 0; i < skillsList; i++ ) {
    var skill = document.createElement("LI");
    skill.innerText = skill[i];
    console.log(skill);
