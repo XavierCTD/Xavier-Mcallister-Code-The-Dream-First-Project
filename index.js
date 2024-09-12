@@ -142,20 +142,19 @@ messageForm.addEventListener("submit", onFormSubmit);
 // Adding Fetch Method
 
 
-const userName = 'Xav183';
-
-fetch(`https://api.github.com/users/${userName}/repos`)
-   .then((response => {
+fetch("https://api.github.com/users/${GITHUB_USERNAME}/repos")
+   .then((response) => {
       if(!response.ok) {
-         return response.text();
-      } else {
-         throw new Error('Request Failed');
-      }
-   })
+         throw new Error("Request failed"); 
+   }
+   return response.json();
+});
 
 .then((data) => {
-  const repositories = JSON.parse(data);
-  console.log(repositories);
+  console.log = ("json data = ", data);
+  repositories = [...data];
+  console.log("repositories array = ", repositories);
+   
 
 // Creating repository lists
 
@@ -163,16 +162,14 @@ const projectSection = document.getElementById("project-sections");
 const projectList = document.getElementByTagName("UL");
    projectSection.appendChild(projectList);
    
-   for(let repository of repositories) {
-      const project = document.createElement("LI");
-      project.innerText = repository.name;
-      projectList.appendChild(project);
+   for(let i = 0; i < repositories.length; i++) {
+      var project = document.createElement("LI");
+      project.innerText = repository[i].html_url;
+      console.log(project);
+      projectList[0].appendChild(project);
    }
  })
  .catch((error) => {
-    if (error instanceof SyntaxError) {
-       console.error("Unparsable response from server");
-    } else {
-    console.error('An error occured:', error.message);
-    }
+    console.error('An error occured:', error);
  });
+ 
