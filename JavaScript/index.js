@@ -220,7 +220,6 @@ console.log(messageForm);
 
 // Adding Fetch Method
 
-const userName = "Xav183";
 
 fetch(`https://api.github.com/users/${userName}/repos`)
    .then((response) => {

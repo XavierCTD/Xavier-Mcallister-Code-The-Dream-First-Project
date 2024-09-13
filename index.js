@@ -79,7 +79,7 @@ function onFormSubmit(event) {
    const data = new FormData(event.target);
    console.log(data);
 
-   const userName = data.get(usersName);
+   const userName = data.get(userName);
    const email = data.get(usersEmail);
    console.log(userName);
    console.log(email);
@@ -96,8 +96,8 @@ messageSection.hidden = false;
 // Message Display
 
 const newMessage = document.createElement("LI");
-newString = <a href="mailto:${email}">${username}</a>\n
-<span>${usersMessage}</span>";
+newString = `<a href="mailto:${email}">${userName}</a>
+<span>${usersMessage}</span>"`;
 console.log(newString);
 newMessage.innerHTML = newString;
 
@@ -150,10 +150,10 @@ fetch("https://api.github.com/users/${GITHUB_USERNAME}/repos")
    return response.json();
 });
 
-.then((data) => {
-  console.log = ("json data = ", data);
-  repositories = [...data];
-  console.log("repositories array = ", repositories);
+   then((data) => {
+     console.log = ("json data = ", data);
+     repositories = [...data];
+     console.log("repositories array = ", repositories);
    
 
 // Creating repository lists
