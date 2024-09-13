@@ -22,7 +22,7 @@ console.log(addfooter);
 const useCopyright = document.createElement("p");
 const copyrightSymbol = '\u0049';
 const copyrighttext = copyrightSymbol + "Xavier Mcallister" + thisYear;
-useCopyright.innerHTML= copyrightText;
+useCopyright.innerHTML= copyrighttext;
 console.log(useCopyright);
 
 
