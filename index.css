@@ -65,6 +65,13 @@ ul {
   text-align: center;
 }
 
+li {
+  list-style-type: none;
+  color: green;
+  text-align: left;
+  padding: 15px;
+}
+
 a:link {
   color: red;
   text-decoration: none;
